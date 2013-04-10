@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Messaging &mdash; OpenERP version 7 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="OpenERP version 7 0.1 documentation" href="../index.html" />
+    <link rel="next" title="Sales" href="sales.html" />
+    <link rel="prev" title="Web interface general structure" href="../intro/common.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sales.html" title="Sales"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../intro/common.html" title="Web interface general structure"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">OpenERP version 7 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="messaging">
+<h1>Messaging<a class="headerlink" href="#messaging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>Messaging is a new feature in OpenERP 7, which aims to keep all business communications within the ERP system, versus externally such as in separate email clients. Messages allow for an out and in flow of discussions directly from OpenERP to a contact/customer/partner/colleage. Messages also serves as a business todo list based on those communication flows, and discussion groups for mailing list functionality for business teams.</p>
+</div>
+<div class="section" id="sub-menus">
+<h2>Sub menus<a class="headerlink" href="#sub-menus" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshot displays the main sub menu items of the messaging functionality, and some explanations on what they do.</p>
+<img alt="../_images/mess_submenu.png" src="../_images/mess_submenu.png" />
+<ol class="arabic simple">
+<li>User inbox, this displays all unread communications for which the user is a part of. Messages that are marked done do not display here, messages marked todo are not displayed here. This box should be kept empty, and messages either marked done after reading them, or marked todo if they are actionable. An empty inbox represents an ideal period in which there are no business communications for which the user is unaware.</li>
+<li>These are messages which were send directly to the user, and are therefore a lot more relevant to the given user. Messages here should also ideally be read and marked done or todo, and cleared from view.</li>
+<li>These are messages marked todo from previous boxes, and require user action. Once the user has acted on the message, the user marks the message done. This serves as a todo list based off the business communications.</li>
+<li>Archives are where all messages marked done, will be kept. They are meant to be out of sight and out of the way, but available to find if required. This box typically will only be used when the user requires information from previous messages marked done.</li>
+<li>This is the OpenERP calendar for the user, showing user meetings and other colleague meetings as well.</li>
+<li>Groups are mailing lists for collaborative messaging. Once a user joins a group, the user will see all new communications for the group, and will also be able to post messages to the group. All other members of the group can read and comment on the messages, this is a mailing list like feature for group discussions.</li>
+<li>This is where a user can find new groups within the company, or even create a new group if permissions allow. Once a group is selected and joined, a sub-menu list with the group will be shown to the user.</li>
+<li>Unread messages count. This is a count of messages that the user has not read in the respective box.</li>
+</ol>
+</div>
+<div class="section" id="message-marking">
+<h2>Message marking<a class="headerlink" href="#message-marking" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshot displays the buttons used to mark messages as done, or todo, or to reply to the message.</p>
+<img alt="../_images/mess_marking.png" src="../_images/mess_marking.png" />
+<ol class="arabic simple">
+<li>Mark this message as todo. If the message is actionable to the user, this marks the message as todo, and moves the message out of the current box. The message will then be seen in the todo sub menu.</li>
+<li>This replies to the message, providing an input box below the message, in which the user can type the reply and send it.</li>
+<li>Mark message as done. This moves the message into the archive and out of sight, but accessible if later needed for any reason.</li>
+</ol>
+</div>
+<div class="section" id="groups">
+<h2>Groups<a class="headerlink" href="#groups" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshot displays user actions within the groups area of messaging.</p>
+<img alt="../_images/mess_groups.png" src="../_images/mess_groups.png" />
+<ol class="arabic simple">
+<li>Leave a group. Each user by default is part of a group called &#8220;Whole company&#8221;, but also a part of other groups the user elected to be in. A user can at any time leave a group by selecting unfollow on a group.</li>
+<li>Join a group. A user can join a group that he/she has permissions for, and can thereafter read and post new messages within the joined group.</li>
+<li>A user may create a group if he/she has permissions, other users can then join the group.</li>
+</ol>
+</div>
+<div class="section" id="sending-messages">
+<h2>Sending messages<a class="headerlink" href="#sending-messages" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshot displays the interface for sending messages to other users or contacts/customers/partners etc</p>
+<img alt="../_images/mess_sending.png" src="../_images/mess_sending.png" />
+<p><strong>Followers</strong>: In OpenERP 7, any user is able to follow other users/contacts/customers/partners, or even documents. All messages then sent to and from a person/document&#8217;s follower message composer will be received by the user (being a follower). Replies to such messages is also seen by all followers of the person/document. Followers is like group messaging, centered around a contact/person/document etc. They can be seen as mini groups that come and go with documents or persons, for which discussions are based around.</p>
+<p>OpenERP 7 allows a user to compose a message to any person, or a shortcut to write to all followers of a person/document.</p>
+<ol class="arabic simple">
+<li>This button allows a user to generically compose a new message to any person or contact.</li>
+<li>This is the shortcut to compose and send a message to followers of the user. (All others following you)</li>
+</ol>
+<p>The screenshot below displays the generic message compose window</p>
+<img alt="../_images/mess_compose.png" src="../_images/mess_compose.png" />
+<ol class="arabic simple">
+<li>This is where recipients will be entered, simply typing the recipients starting email or name, will offer choices based on contacts within the system. More than one recipient may be entered here.</li>
+<li>These are rich text formatting options which can be used to compose this message</li>
+<li>This allows a user to attach a file from his/her PC, to the message. This is the same as attachments in email. The user can select a file from their local system to be sent.</li>
+<li>These buttons send the message or cancel the compose.</li>
+<li>This allows a user to select a template, with predefined message body content and formatting (templates will be discussed later)</li>
+</ol>
+</div>
+<div class="section" id="message-searching">
+<h2>Message Searching<a class="headerlink" href="#message-searching" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshot displays the searching options in the messaging section. Searching can be done with the universal search bar as indicated.</p>
+<img alt="../_images/mess_search.png" src="../_images/mess_search.png" />
+<ol class="arabic simple">
+<li>To access the advanced search options, this dropdown icon should be clicked. It presents advanced search filters that is relevant for the area in which the user is working.</li>
+<li>These are quick filters, clicking on them applies the filter immediately, they are shortcuts for commonly needed filters.</li>
+<li>Advanced search for message components, such as subject, author, attachments, etc</li>
+<li>Apply advanced search.</li>
+</ol>
+<p>The following screenshot displays how to remove applied filters to a search.</p>
+<img alt="../_images/mess_rmfilter.png" src="../_images/mess_rmfilter.png" />
+<ol class="arabic simple">
+<li>Each applied filter displays in the universal search bar as a box. Clicking on the &#8216;x&#8217; on the right end of the box for the filter, removes the filter and searches without that filter</li>
+</ol>
+</div>
+<div class="section" id="message-viewing">
+<h2>Message viewing<a class="headerlink" href="#message-viewing" title="Permalink to this headline">¶</a></h2>
+<p>The following screenshot displays a typical message thread</p>
+<img alt="../_images/mess_view.png" src="../_images/mess_view.png" />
+<ol class="arabic simple">
+<li>Threaded messages. A conversation and its replies are kept together in a thread to read. The original message is shown on the top, and each reply thereafter are displayed underneath with left indentation to visually show that the message is part of a thread.</li>
+<li>The message subject is shown once on the original, which is the top most message in the thread. The subject is bolded for quick viewing.</li>
+<li>Attachments in messages are shown in preview of the messages they are sent with. Clicking on any of the attachments allows the user to download the attachment locally, and open and view it.</li>
+</ol>
+<p>The following screenshot outlines more info on a typical message display</p>
+<img alt="../_images/mess_view2.png" src="../_images/mess_view2.png" />
+<ol class="arabic simple">
+<li>Picture of original message sender. If the contact in the system has an image assigned, it is displayed here, otherwise a default image is displayed.</li>
+<li>If the message text is long, the message is previewed and the rest of the message is hidden. To display the entire message in question, the &#8220;read more&#8221; link can be clicked.</li>
+<li>Recipients of the message can be seen at a glance at the bottom of a given message</li>
+<li>Message age can be seen at a glance at the bottom of a given message</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Messaging</a><ul>
+<li><a class="reference internal" href="#about">About</a></li>
+<li><a class="reference internal" href="#sub-menus">Sub menus</a></li>
+<li><a class="reference internal" href="#message-marking">Message marking</a></li>
+<li><a class="reference internal" href="#groups">Groups</a></li>
+<li><a class="reference internal" href="#sending-messages">Sending messages</a></li>
+<li><a class="reference internal" href="#message-searching">Message Searching</a></li>
+<li><a class="reference internal" href="#message-viewing">Message viewing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../intro/common.html"
+                        title="previous chapter">Web interface general structure</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sales.html"
+                        title="next chapter">Sales</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/modules/messaging.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sales.html" title="Sales"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../intro/common.html" title="Web interface general structure"
+             >previous</a> |</li>
+        <li><a href="../index.html">OpenERP version 7 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, erpweb.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
